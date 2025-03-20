@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,112 +6,243 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Posts</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=account_circle" />
 </head>
-<body>
-    <!---navbar-->
-    <nav class="bg-white-800 p-2 shadow-sm">
-
-        <!--dropdown menu toevoegen + small screens support---> 
-            <ul>
-                <logo><a href="index.html">Logo</a></logo>
-        
-                <div class="flex justify-end space-x-4">
-                    <li><a href="search">search</a></li>
-                    <li><a href="#favourites">Favorites</a></li>
-                    <li><a href="myposts.html">My posts</a></li>
-                    <li><a href="#friends">Friends</a></li>
-                    <li><a href="#popular">Popular</a></li>
-                    <button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-1 px-3 border border-gray-400 rounded shadow">
-                        <a href="login.html">Sign in</a>
-                      </button>
-                      <button class="bg-black hover:bg-gray-100 text-white font-semibold py-1 px-3 border border-gray-400 rounded shadow">
-                        <a href="signup.html">Register</a>
-                      </button>
-                </div>
+<body class="bg-gray-100">
+    <!-- navbarr -->
+    <nav class="bg-white p-4 shadow-md">
+        <div class="flex justify-between items-center">
+            <a href="index.html" class="text-xl font-bold">Logo</a>
+            <ul class="flex space-x-4">
+                <li><a href="search" class="hover:text-blue-500">Search</a></li>
+                <li><a href="#favourites" class="hover:text-blue-500">Favorites</a></li>
+                <li><a href="myposts.html" class="hover:text-blue-500">My Posts</a></li>
+                <li><a href="#friends" class="hover:text-blue-500">Friends</a></li>
+                <li><a href="#popular" class="hover:text-blue-500">Popular</a></li>
+                <button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-1 px-3 border border-gray-400 rounded shadow">
+                    <a href="login.html">Sign in</a>
+                </button>
+                <button class="bg-black hover:bg-gray-100 text-white font-semibold py-1 px-3 border border-gray-400 rounded shadow">
+                    <a href="signup.html">Register</a>
+                </button>
             </ul>
-        </nav>
-<!---welcome back alert-->
-        <div class="bg-blue-100 border-t border-b border-blue-500 text-blue-700 px-4 py-3" role="alert">
-            <p class="font-bold">Welcome back!</p>
-            <p class="text-sm">Check out what's new</p>
-          </div>
+        </div>
+    </nav>
 
-    <!-- Main content -->
-    <main>
-        <!---profile card-->
+    <!--welcome back alert -->
+    <div class="bg-blue-100 border-t border-b border-blue-500 text-blue-700 px-4 py-3" role="alert">
+        <p class="font-bold">Welcome back!</p>
+        <p class="text-sm">Check out what's new</p>
+    </div>
+
+    <main class="container mx-auto p-4">
+        <div class="grid grid-cols-3 gap-4">
+            <!-- Profile Card -->
+            <div class="col-span-1 bg-white rounded-lg shadow-md p-4">
+                <div class="text-center">
+                    <img src="https://picsum.photos/200" alt="Profile Picture" class="rounded-full mx-auto">
+                    <h2 class="text-xl font-bold">@Username</h2>
+                    <p class="text-gray-600">Write a bio...</p>
+                </div>
+            </div>
+
+            <div class="col-span-2">
+                <!---pagination -->
+                <div class="flex space-x-4 mb-4">
+                    <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600" onclick="showSection('my-posts')">My Posts</button>
+                    <button class="bg-gray-200 text-gray-800 px-4 py-2 rounded hover:bg-gray-300" onclick="showSection('my-likes')">My Likes</button>
+                    <button class="bg-gray-200 text-gray-800 px-4 py-2 rounded hover:bg-gray-300" onclick="showSection('my-friends')">My Friends</button>
+                    <button class="bg-gray-200 text-gray-800 px-4 py-2 rounded hover:bg-gray-300" onclick="showSection('favourites')">Favourites</button>
+                </div>
+
+                <!-- my posts default laten zien -->
+                <div id="my-posts" class="grid grid-cols-2 gap-4">
+                    <div class="bg-white rounded-lg shadow-md p-4">
+                        <h3 class="font-bold text-lg">Post 1</h3>
+                        
+                        <p class="text-gray-700 text-base">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
+                          </p>
+                        <div class="px-6 pt-4 pb-2">
+                          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Foryou</span>
+                          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Viral</span>
+                          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Trending</span>
+                        </div>
+
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-4">
+                        <h3 class="font-bold text-lg">Post 2</h3>
+                        <p class="text-gray-700 text-base">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
+                          </p>
+                        <div class="px-6 pt-4 pb-2">
+                          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Swimming</span>
+                          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Beach</span>
+                          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Summer</span>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-4">
+                        <h3 class="font-bold text-lg">Post 3</h3>
+                        <p class="text-gray-700 text-base">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
+                          </p>
+                        <div class="px-6 pt-4 pb-2">
+                          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Photography</span>
+                          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Travel</span>
+                          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Winter</span>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-4">
+                        <h3 class="font-bold text-lg">Post 4</h3>
+                        <p class="text-gray-700 text-base">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
+                          </p>
+                        <div class="px-6 pt-4 pb-2">
+                          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#LOL</span>
+                          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Happiness</span>
+                          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Fun</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- de andere secties fixen -->
+                <div id="my-likes" class="hidden">
+
+                    <div class="max-w-sm w-full lg:max-w-full lg:flex">
+                        <div class="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" style="background-image: url('https://picsum.photos/200')">
+
+                        </div>
+                        <div class="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
+                          <div class="mb-8">
+                            <p class="text-sm text-gray-600 flex items-center">
+                              <svg class="fill-current text-gray-500 w-3 h-3 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                <path d="M4 8V6a6 6 0 1 1 12 0v2h1a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-8c0-1.1.9-2 2-2h1zm5 6.73V17h2v-2.27a2 2 0 1 0-2 0zM7 6v2h6V6a3 3 0 0 0-6 0z" />
+                              </svg>
+                              Members only
+                            </p>
+                            <div class="text-gray-900 font-bold text-xl mb-2">Can coffee make you a better developer?</div>
+                            <p class="text-gray-700 text-base">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.</p>
+                          </div>
+                          <div class="flex items-center">
+                            <img class="w-10 h-10 rounded-full mr-4" src="https://fastly.picsum.photos/id/715/200/200.jpg?hmac=eR-80S6YYIV9vV26EYLSVACDM5HWe94Oz2hx0icP5vI" alt="Avatar of Jonathan Reinink">
+                            <div class="text-sm">
+                              <p class="text-gray-900 leading-none">Jonathan Reinink</p>
+                              <p class="text-gray-600">Aug 18</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                </div>
+                <div id="my-friends" class="hidden">
+
+                    <ul role="list" class="divide-y divide-gray-100">
+                        <li class="flex justify-between gap-x-6 py-5">
+                          <div class="flex min-w-0 gap-x-4">
+                            <img class="size-12 flex-none rounded-full bg-gray-50" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                            <div class="min-w-0 flex-auto">
+                              <p class="text-sm/6 font-semibold text-gray-900">Leslie Alexander</p>
+                              <p class="mt-1 truncate text-xs/5 text-gray-500">leslie.alexander@example.com</p>
+                            </div>
+                          </div>
+                          <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
+                            <p class="text-sm/6 text-gray-900">Co-Founder / CEO</p>
+                            <p class="mt-1 text-xs/5 text-gray-500">Last seen <time datetime="2023-01-23T13:23Z">3h ago</time></p>
+                          </div>
+                        </li>
+                        <li class="flex justify-between gap-x-6 py-5">
+                          <div class="flex min-w-0 gap-x-4">
+                            <img class="size-12 flex-none rounded-full bg-gray-50" src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                            <div class="min-w-0 flex-auto">
+                              <p class="text-sm/6 font-semibold text-gray-900">Michael Foster</p>
+                              <p class="mt-1 truncate text-xs/5 text-gray-500">michael.foster@example.com</p>
+                            </div>
+                          </div>
+                          <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
+                            <p class="text-sm/6 text-gray-900">Co-Founder / CTO</p>
+                            <p class="mt-1 text-xs/5 text-gray-500">Last seen <time datetime="2023-01-23T13:23Z">3h ago</time></p>
+                          </div>
+                        </li>
+                        <li class="flex justify-between gap-x-6 py-5">
+                          <div class="flex min-w-0 gap-x-4">
+                            <img class="size-12 flex-none rounded-full bg-gray-50" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                            <div class="min-w-0 flex-auto">
+                              <p class="text-sm/6 font-semibold text-gray-900">Dries Vincent</p>
+                              <p class="mt-1 truncate text-xs/5 text-gray-500">dries.vincent@example.com</p>
+                            </div>
+                          </div>
+                          <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
+                            <p class="text-sm/6 text-gray-900">Business Relations</p>
+                            <div class="mt-1 flex items-center gap-x-1.5">
+                              <div class="flex-none rounded-full bg-emerald-500/20 p-1">
+                                <div class="size-1.5 rounded-full bg-emerald-500"></div>
+                              </div>
+                              <p class="text-xs/5 text-gray-500">Online</p>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="flex justify-between gap-x-6 py-5">
+                          <div class="flex min-w-0 gap-x-4">
+                            <img class="size-12 flex-none rounded-full bg-gray-50" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                            <div class="min-w-0 flex-auto">
+                              <p class="text-sm/6 font-semibold text-gray-900">Lindsay Walton</p>
+                              <p class="mt-1 truncate text-xs/5 text-gray-500">lindsay.walton@example.com</p>
+                            </div>
+                          </div>
+                          <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
+                            <p class="text-sm/6 text-gray-900">Front-end Developer</p>
+                            <p class="mt-1 text-xs/5 text-gray-500">Last seen <time datetime="2023-01-23T13:23Z">3h ago</time></p>
+                          </div>
+                        </li>
+                        <li class="flex justify-between gap-x-6 py-5">
+                          <div class="flex min-w-0 gap-x-4">
+                            <img class="size-12 flex-none rounded-full bg-gray-50" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                            <div class="min-w-0 flex-auto">
+                              <p class="text-sm/6 font-semibold text-gray-900">Courtney Henry</p>
+                              <p class="mt-1 truncate text-xs/5 text-gray-500">courtney.henry@example.com</p>
+                            </div>
+                          </div>
+                          <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
+                            <p class="text-sm/6 text-gray-900">Designer</p>
+                            <p class="mt-1 text-xs/5 text-gray-500">Last seen <time datetime="2023-01-23T13:23Z">3h ago</time></p>
+                          </div>
+                        </li>
+                        <li class="flex justify-between gap-x-6 py-5">
+                          <div class="flex min-w-0 gap-x-4">
+                            <img class="size-12 flex-none rounded-full bg-gray-50" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                            <div class="min-w-0 flex-auto">
+                              <p class="text-sm/6 font-semibold text-gray-900">Tom Cook</p>
+                              <p class="mt-1 truncate text-xs/5 text-gray-500">tom.cook@example.com</p>
+                            </div>
+                          </div>
+                          <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
+                            <p class="text-sm/6 text-gray-900">Director of Product</p>
+                            <div class="mt-1 flex items-center gap-x-1.5">
+                              <div class="flex-none rounded-full bg-emerald-500/20 p-1">
+                                <div class="size-1.5 rounded-full bg-emerald-500"></div>
+                              </div>
+                              <p class="text-xs/5 text-gray-500">Online</p>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+
+                </div>
+                <div id="favourites" class="hidden">
+                    <p>Favourites content goes here...</p>
+                </div>
+            </div>
+        </div>
     </main>
 
-    <!---pagination (my postst(defaulted), my likes, my friends, favourites)-->
-    
-    <article>
-        <ul>
-            <div class="flex mb-4">
-                <div class="w-full bg-gray-500 h-12 text-center p-4">
-                    <h2>My Posts</h2>
-                </div>
-              </div>
-            <div class="flex mb-4">
-                <div class="w-2/5  h-12">
-                    <div class="max-w-sm rounded overflow-hidden shadow-lg">
-                        <div class="px-6 py-4">
-                          <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
-                          <p class="text-gray-700 text-base">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
-                          </p>
-                        </div>
-                        <div class="px-6 pt-4 pb-2">
-                          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
-                          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
-                          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
-                        </div>
-                      </div>
-        
-                      <div class="max-w-sm rounded overflow-hidden shadow-lg">
-                        <div class="px-6 py-4">
-                          <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
-                          <p class="text-gray-700 text-base">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
-                          </p>
-                        </div>
-                        <div class="px-6 pt-4 pb-2">
-                          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
-                          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
-                          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
-                        </div>
-                      </div>
-                </div>
-                <div class="w-3/5 flex- h-12">
-                    <div class="max-w-sm rounded overflow-hidden shadow-lg">
-                        <div class="px-6 py-4">
-                          <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
-                          <p class="text-gray-700 text-base">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
-                          </p>
-                        </div>
-                        <div class="px-6 pt-4 pb-2">
-                          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
-                          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
-                          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
-                        </div>
-                      </div>
-        
-                      <div class="max-w-sm rounded overflow-hidden shadow-lg">
-                        <div class="px-6 py-4">
-                          <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
-                          <p class="text-gray-700 text-base">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
-                          </p>
-                        </div>
-                        <div class="px-6 pt-4 pb-2">
-                          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
-                          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
-                          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
-                        </div>
-                      </div>
-                </div>
-              </div>
-        </ul>
-    </article>
-
+    <script>
+        function showSection(sectionId) {
+            const sections = ['my-posts', 'my-likes', 'my-friends', 'favourites'];
+            sections.forEach(id => {
+                document.getElementById(id).classList.add('hidden');
+            });
+            document.getElementById(sectionId).classList.remove('hidden');
+        }
+    </script>
 </body>
 </html>
