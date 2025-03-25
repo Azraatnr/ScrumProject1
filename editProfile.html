@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    
+
+    <!-- nav-->
+    <nav class="bg-white p-4 shadow-md">
+        <div class="flex justify-between items-center">
+            <a href="index.html" class="text-xl font-bold">Logo</a>
+            <ul class="flex space-x-4">
+                <li><a href="search" class="hover:text-blue-500">Search</a></li>
+                <li><a href="#favourites" class="hover:text-blue-500">Favorites</a></li>
+                <li><a href="myposts.html" class="hover:text-blue-500">My Posts</a></li>
+                <li><a href="#friends" class="hover:text-blue-500">Friends</a></li>
+                <li><a href="#popular" class="hover:text-blue-500">Popular</a></li>
+                <button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-1 px-3 border border-gray-400 rounded shadow">
+                    <a href="login.html">Sign in</a>
+                </button>
+                <button class="bg-black hover:bg-gray-100 text-white font-semibold py-1 px-3 border border-gray-400 rounded shadow">
+                    <a href="signup.html">Register</a>
+                </button>
+            </ul>
+        </div>
+    </nav>
+
+
+<!---change username-->
+<div class="max-w-lg mx-auto bg-white rounded-lg shadow-md p-6 my-4 space-y-6">
+    <div>
+        <h2 class="text-2xl font-bold text-center mb-6">Edit Profile</h2>
+        <form>
+            <div class="mb-4">
+                <label for="username" class="block text-sm font-medium text-gray-700">Username</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username" required
+                    class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+            </div>
+            <div class="flex justify-center">
+            </div>
+        </form>
+    </div>
+
+    <!-- change pfp -->
+    <div>
+        <h2 class="text-2xl font-bold text-center mb-6">Change Profile Picture</h2>
+        <form>
+            <div class="mb-4">
+                <label for="profilepic" class="block text-sm font-medium text-gray-700">Profile Picture</label>
+                <input type="text" id="profilepic" name="profilepic" placeholder="https://picsum.photos/20/30" required
+                    class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+            </div>
+        </form>
+    </div>
+
+    <!-- change bio -->
+    <div>
+        <h2 class="text-2xl font-bold text-center mb-6">Change Bio</h2>
+        <form>
+            <div class="mb-4">
+                <label for="bio" class="block text-sm font-medium text-gray-700">Bio</label>
+                <input type="text" id="bio" name="bio" placeholder="Enter your bio" required
+                    class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+            </div>
+            <div class="flex justify-center">
+
+            </div>
+        </form>
+    </div>
+
+    <!-- save Changes -->
+    <div>
+        <form>
+            <div class="flex justify-center">
+                <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+                    Save Changes
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!--click > save changes > terug naar profile-->
+
+</body>
+</html>
