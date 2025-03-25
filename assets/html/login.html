@@ -3,34 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up</title>
+    <title>Log In</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body class="flex flex-col min-h-screen bg-gray-100">
-    <!-- nav-->
+    <!-- Navbar -->
     <nav class="bg-white p-4 shadow-md">
         <div class="flex justify-between items-center">
             <a href="index.html" class="text-xl font-bold">Logo</a>
             <ul class="flex space-x-4">
                 <li><a href="search" class="hover:text-blue-500">Search</a></li>
                 <li><a href="#favourites" class="hover:text-blue-500">Favorites</a></li>
-                <li><a href="myposts.html" class="hover:text-blue-500">My Posts</a></li>
+                <li><a href="/assets/html/myPosts.html" class="hover:text-blue-500">My Posts</a></li>
                 <li><a href="#friends" class="hover:text-blue-500">Friends</a></li>
                 <li><a href="#popular" class="hover:text-blue-500">Popular</a></li>
                 <button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-1 px-3 border border-gray-400 rounded shadow">
-                    <a href="login.html">Sign in</a>
+                    <a href="/assets/html/login.html">Sign in</a>
                 </button>
                 <button class="bg-black hover:bg-gray-100 text-white font-semibold py-1 px-3 border border-gray-400 rounded shadow">
-                    <a href="signup.html">Register</a>
+                    <a href="/assets/html/signup.html">Register</a>
                 </button>
             </ul>
         </div>
     </nav>
 
-    <!-- main-->
+    <!-- Main Content -->
     <main class="flex-grow container mx-auto p-4">
         <div class="max-w-md mx-auto bg-white rounded-lg shadow-md p-6">
-            <h2 class="text-2xl font-bold text-center mb-6">Sign Up for an Account!</h2>
+            <h2 class="text-2xl font-bold text-center mb-6">Welcome Back!</h2>
             <form>
                 <div class="mb-4">
                     <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
@@ -39,47 +39,38 @@
                 </div>
 
                 <div class="mb-4">
-                    <label for="username" class="block text-sm font-medium text-gray-700">Username</label>
-                    <input type="text" id="username" name="username" placeholder="Enter your username" required
-                        class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
-                </div>
-
-                <div class="mb-4">
                     <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
                     <input type="password" id="password" name="password" placeholder="Enter your password" required
                         class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
                 </div>
-
-                <div class="mb-4">
-                    <p class="text-sm text-gray-600">
-                        By creating an account, you agree to the 
-                        <a href="termsOfUse.html" class="text-blue-500 hover:underline">Terms of Use</a>.
-                    </p>
+                <div class="flex items-center mb-4">
+                    <input type="checkbox" id="remember" name="remember" class="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
+                    <label for="remember" class="ml-2 text-sm text-gray-700">Remember me</label>
                 </div>
 
                 <div class="flex justify-center">
                     <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
-                        Sign Up
+                        Log In
                     </button>
                 </div>
             </form>
 
             <div class="mt-4 text-center">
                 <p class="text-sm text-gray-600">
-                    Already have an account? 
-                    <a href="login.html" class="text-blue-500 hover:underline">Log In</a>.
+                    Don't have an account? 
+                    <a href="/assets/html/signup.html" class="text-blue-500 hover:underline">Sign Up</a>.
                 </p>
             </div>
         </div>
     </main>
 
-    <!-- Footer -->
+    <!--foot -->
     <footer class="bg-white rounded-lg shadow-sm p-4 dark:bg-gray-300">
         <div class="w-full mx-auto max-w-screen-xl flex justify-between items-center">
             <span class="text-sm text-gray-500 dark:text-gray-400"> OnlineForum™ ©2025 | All Rights Reserved.</span>
             <ul class="flex space-x-4 text-sm font-medium text-gray-500 dark:text-gray-400">
                 <li><a href="#" class="hover:underline">About</a></li>
-                <li><a href="termsOfUse.html" class="hover:underline">Terms of Use</a></li>
+                <li><a href="/assets/html/termsOfUse.html" class="hover:underline">Terms of Use</a></li>
                 <li><a href="#" class="hover:underline">Licensing</a></li>
                 <li><a href="#" class="hover:underline">Contact</a></li>
             </ul>
