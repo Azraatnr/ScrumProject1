@@ -9,11 +9,6 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
     />
-
-    <link
-      href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css"
-      rel="stylesheet"
-    />
   </head>
   <body class="p-3">
     <div class="max-w-11/12 mx-auto">
@@ -664,7 +659,7 @@
                 <input
                   type="text"
                   id="addComment"
-                  class="block w-full text-sm text-black border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-600 focus:border-blue-600 pr-10"
+                  class="block w-full text-sm text-black border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-600 focus:border-blue-600 pr-10 p-2"
                   placeholder="Add your Comment..."
                   required
                 />
@@ -980,7 +975,7 @@
           </div>
         </div>
       </div>
-      <div class="flex justify-center w-full mt-10">
+      <div class="flex justify-center w-full my-10">
         <button
           type="button"
           class="bg-blue-600 py-2 px-20 text-white font-bold rounded-lg shadow-lg hover:bg-blue-700 hover:cursor-pointer hover:shadow-2xl"
@@ -988,8 +983,118 @@
           Show More...
         </button>
       </div>
+      <div class="mb-8">
+        <h2 class="bold text-xl mb-0.5">Mood for Today?</h2>
+        <p class="text-gray-600">Let your friends know what you are up to!</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 mb-10">
+        <div class="col-span-1">
+          <h4 class="mb-4">Message:</h4>
+          <form action="">
+            <div
+              class="md:w-2/3 w-full mb-4 border border-gray-900 rounded-lg bg-white"
+            >
+              <div class="px-2 py-2 bg-white rounded-t-lg">
+                <label for="postNewMessage" class="sr-only">Your Message</label>
+                <textarea
+                  name="postNewMessage"
+                  id="postNewMessage"
+                  rows="6"
+                  class="w-full px-3 py-2 text-sm text-black border-0 rounded-lg focus:outline-none"
+                  placeholder="Write your message"
+                  required
+                ></textarea>
+              </div>
+              <div class="flex items-center justify-between px-3 py-3 border-t">
+                <button
+                  type="button"
+                  id="seeExampleButton"
+                  class="bg-blue-800 py-2 px-8 text-white text-sm rounded-lg shadow-sm hover:bg-blue-700 hover:cursor-pointer hover:shadow-lg"
+                >
+                  See example
+                </button>
+                <button
+                  id="uploadBtn"
+                  type="button"
+                  class="p-1 inline-flex hover:text-blue-700"
+                >
+                  <span class="material-symbols-outlined md-18"
+                    >imagesmode</span
+                  >
+                </button>
+              </div>
+              <input
+                type="file"
+                id="fileInput"
+                accept="image/*"
+                class="hidden"
+              />
+              <div id="imagePreview"></div>
+            </div>
+          </form>
+        </div>
+
+        <div class="col-span-1 md:w-2/3 relative">
+          <h4 class="mb-4">Example:</h4>
+          <div
+            id="showExamplePost"
+            class="max-w-[400px] bg-white border-gray-900 border-2 rounded-lg shadow-lg row-span-4 col-span-1"
+          >
+            <div class="px-2 py-1 flex flex-col justify-between h-full">
+              <div class="flex items-center pl-2">
+                <div class="shrink-0">
+                  <img
+                    class="w-8 h-8 rounded-full"
+                    src="/image/Avatar.png"
+                    alt="profilePicture"
+                    id="profilePicture"
+                  />
+                </div>
+                <div class="flex-1 min-w-0 ms-4">
+                  <p class="username text-base font-bold truncate">UserName</p>
+                  <p class="timePosted text-sm text-gray-500 truncate">
+                    10h ago
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div id="showImageExample"></div>
+            <div
+              class="text-user p-4 pt-4 max-h-36 overflow-y-auto items-center"
+            >
+              <p id="userMessage"></p>
+            </div>
+
+            <div class="flex justify-between w-full pt-2 pb-1 px-3">
+              <div class="flex items-center">
+                <span class="material-symbols-outlined"> favorite </span>
+                <div class="likesUser">0</div>
+              </div>
+              <div class="flex items-center">
+                <span class="material-symbols-outlined mr-2"> comment </span>
+                <div class="commentUser">0</div>
+              </div>
+              <div>
+                <span class="material-symbols-outlined"> ios_share </span>
+              </div>
+              <div>
+                <span class="material-symbols-outlined"> send </span>
+              </div>
+            </div>
+          </div>
+          <button
+            type="button"
+            id="postUserPost"
+            class="bg-blue-800 py-2 px-8 text-white text-sm rounded-lg shadow-sm hover:bg-blue-700 hover:cursor-pointer hover:shadow-lg absolute bottom-0 mt-10"
+          >
+            Post
+          </button>
+        </div>
+      </div>
+
       <footer class="mt-10">
-        <div class="mb-8">
+        <div class="mb-12">
           <h2 class="bold mb-0.5 text-2xl">Contact Us</h2>
           <p class="text-gray-600">
             Feel free to contact us any time. For questions or if you have tips
@@ -1000,7 +1105,7 @@
         <div
           class="max-w-full h-full grid grid-cols-4 grid-rows-2 md:grid-rows-1"
         >
-          <form action="" class="col-span-4 md:col-span-1 ">
+          <form action="" class="col-span-4 md:col-span-1">
             <div class="relative z-0 w-full mb-5 group">
               <input
                 type="text"
@@ -1053,7 +1158,7 @@
               Send
             </button>
           </form>
-          <div class="md:col-start-3 grid-col-1 col-start-1 ">
+          <div class="md:col-start-3 grid-col-1 col-start-1">
             <ul>
               <a href="#"><li class="hover:text-blue-800">About</li></a>
               <a href="#"><li class="hover:text-blue-800">Contact</li></a>
@@ -1062,7 +1167,7 @@
               <a href="#"><li class="hover:text-blue-800">Documentation</li></a>
             </ul>
           </div>
-          <div class="md:col-start-4 grid-col-1 col-start-3 ">
+          <div class="md:col-start-4 grid-col-1 col-start-3">
             <ul>
               <a href="#"><li class="hover:text-blue-800">My Page</li></a>
               <a href="#"
@@ -1076,7 +1181,7 @@
         <div class="flex justify-between">
           <div>© idk Inc.</div>
           <div>
-            <a href="#" >Terms of Service</a>
+            <a href="#">Terms of Service</a>
             <a href="#" class="mx-10">Privacy Policy</a>
             <a href="#">Cookies</a>
           </div>

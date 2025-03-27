@@ -37,23 +37,82 @@
               <div class="flex items-center justify-between px-3 py-3 border-t">
                 <button
                   type="button"
+                  id="seeExampleButton"
                   class="bg-blue-800 py-2 px-8 text-white text-sm rounded-lg shadow-sm hover:bg-blue-700 hover:cursor-pointer hover:shadow-lg"
                 >
                   See example
                 </button>
-                <button id="uploadBtn"  type="button" class="p-1  inline-flex hover:text-blue-700">
-                  <span class="material-symbols-outlined md-18">imagesmode</span>
+                <button
+                  id="uploadBtn"
+                  type="button"
+                  class="p-1 inline-flex hover:text-blue-700"
+                >
+                  <span class="material-symbols-outlined md-18"
+                    >imagesmode</span
+                  >
                 </button>
               </div>
-              <input type="file" id="fileInput" accept="image/*" class="hidden">
+              <input
+                type="file"
+                id="fileInput"
+                accept="image/*"
+                class="hidden"
+              />
               <div id="imagePreview"></div>
             </div>
           </form>
         </div>
 
-        <div class="col-span-1">
+        <div class="col-span-1 md:w-2/3">
           <h4 class="mb-4">Example:</h4>
-          
+          <div
+            id="showExamplePost"
+            class="max-w-[400px] bg-white border-gray-900 border-2 rounded-lg shadow-lg row-span-4 col-span-1"
+          >
+            <div class="px-2 py-1 flex flex-col justify-between h-full">
+              <div class="flex items-center pl-2">
+                <div class="shrink-0">
+                  <img
+                    class="w-8 h-8 rounded-full"
+                    src="/image/Avatar.png"
+                    alt="profilePicture"
+                    id="profilePicture"
+                  />
+                </div>
+                <div class="flex-1 min-w-0 ms-4">
+                  <p class="username text-base font-bold truncate">UserName</p>
+                  <p class="timePosted text-sm text-gray-500 truncate">
+                    10h ago
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div id="showImageExample"></div>
+            <div
+              class="text-user p-2 pt-4 max-h-36 overflow-y-auto items-center"
+            >
+              <p id="userMessage">
+              </p>
+            </div>
+
+            <div class="flex justify-between w-full pt-2 pb-1 px-3">
+              <div class="flex items-center">
+                <span class="material-symbols-outlined"> favorite </span>
+                <div class="likesUser">3</div>
+              </div>
+              <div class="flex items-center">
+                <span class="material-symbols-outlined mr-2"> comment </span>
+                <div class="commentUser">3</div>
+              </div>
+              <div>
+                <span class="material-symbols-outlined"> ios_share </span>
+              </div>
+              <div>
+                <span class="material-symbols-outlined"> send </span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
