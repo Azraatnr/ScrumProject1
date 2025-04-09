@@ -254,14 +254,8 @@
   .sticky {
     position: sticky;
   }
-  .end-2 {
-    inset-inline-end: calc(var(--spacing) * 2);
-  }
   .end-2\.5 {
     inset-inline-end: calc(var(--spacing) * 2.5);
-  }
-  .top-0 {
-    top: calc(var(--spacing) * 0);
   }
   .top-2 {
     top: calc(var(--spacing) * 2);
@@ -278,17 +272,8 @@
   .bottom-0 {
     bottom: calc(var(--spacing) * 0);
   }
-  .bottom-2 {
-    bottom: calc(var(--spacing) * 2);
-  }
   .bottom-2\.5 {
     bottom: calc(var(--spacing) * 2.5);
-  }
-  .bottom-3 {
-    bottom: calc(var(--spacing) * 3);
-  }
-  .bottom-4 {
-    bottom: calc(var(--spacing) * 4);
   }
   .isolate {
     isolation: isolate;
@@ -440,9 +425,6 @@
       max-width: 96rem !important;
     }
   }
-  .m-10 {
-    margin: calc(var(--spacing) * 10);
-  }
   .mx-10 {
     margin-inline: calc(var(--spacing) * 10);
   }
@@ -455,29 +437,17 @@
   .ms-4 {
     margin-inline-start: calc(var(--spacing) * 4);
   }
-  .mt-1 {
-    margin-top: calc(var(--spacing) * 1);
-  }
   .mt-10 {
     margin-top: calc(var(--spacing) * 10);
   }
   .mt-16 {
     margin-top: calc(var(--spacing) * 16);
   }
-  .mt-30 {
-    margin-top: calc(var(--spacing) * 30);
-  }
   .mr-2 {
     margin-right: calc(var(--spacing) * 2);
   }
-  .mb-0 {
-    margin-bottom: calc(var(--spacing) * 0);
-  }
   .mb-0\.5 {
     margin-bottom: calc(var(--spacing) * 0.5);
-  }
-  .mb-1 {
-    margin-bottom: calc(var(--spacing) * 1);
   }
   .mb-2 {
     margin-bottom: calc(var(--spacing) * 2);
@@ -499,9 +469,6 @@
   }
   .mb-12 {
     margin-bottom: calc(var(--spacing) * 12);
-  }
-  .mb-15 {
-    margin-bottom: calc(var(--spacing) * 15);
   }
   .ml-2 {
     margin-left: calc(var(--spacing) * 2);
@@ -620,9 +587,6 @@
   .min-h-screen {
     min-height: 100vh;
   }
-  .w-1 {
-    width: calc(var(--spacing) * 1);
-  }
   .w-1\/2 {
     width: calc(1/2 * 100%);
   }
@@ -637,9 +601,6 @@
   }
   .w-screen {
     width: 100vw;
-  }
-  .max-w-11 {
-    max-width: calc(var(--spacing) * 11);
   }
   .max-w-11\/12 {
     max-width: calc(11/12 * 100%);
@@ -1078,9 +1039,6 @@
   }
   .justify-items-stretch {
     justify-items: stretch;
-  }
-  .gap-2 {
-    gap: calc(var(--spacing) * 2);
   }
   .gap-2\.5 {
     gap: calc(var(--spacing) * 2.5);
@@ -1571,9 +1529,6 @@
   }
   .p-4 {
     padding: calc(var(--spacing) * 4);
-  }
-  .p-5 {
-    padding: calc(var(--spacing) * 5);
   }
   .px-0 {
     padding-inline: calc(var(--spacing) * 0);
