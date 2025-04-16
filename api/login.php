@@ -14,6 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->execute(['email' => $email]);
         $loggedInUser = $stmt->fetch();
 
+        header("Content-Type: application/json");
         if ($loggedInUser && password_verify($password, $loggedInUser['password'])) {
             $_SESSION["user_id"] = $loggedInUser["user_id"];
             echo json_encode(['status' => 'success', 'user_id' => $loggedInUser["user_id"]]);
