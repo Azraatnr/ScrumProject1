@@ -1,17 +1,37 @@
+fetch(`${window.location.origin}/api/user.php`)
+    .then((res) => res.json())
+    .then((data) => {
+        console.log(data);
+        document.getElementById('username').textContent = data[0].username;
+    })
+    .catch((err) => console.log(err));
+
+const form = new FormData();
+form.set('username', 'test');
+form.set('password', 'test');
+form.set('email', 'test2@example.com');
+
+fetch(`${window.location.origin}/api/user.php`, {
+    method: 'POST',
+    body: form,
+}).then((res) => res.json())
+    .then((data) => console.log(data))
+    .catch((err) => console.log(err));
+
 function dropDownMenuPost() {
-    const dropdownButtons = document.querySelectorAll(".dropdown-btn");
+    const dropdownButtons = document.querySelectorAll('.dropdown-btn');
 
     dropdownButtons.forEach((button) => {
-        button.addEventListener("click", function (event) {
-            const menuId = button.id.replace("Button", "Menu");
+        button.addEventListener('click', (event) => {
+            const menuId = button.id.replace('Button', 'Menu');
             const menu = document.getElementById(menuId);
 
-            document.querySelectorAll(".dropdown-menu").forEach((dropdown) => {
+            document.querySelectorAll('.dropdown-menu').forEach((dropdown) => {
                 if (dropdown !== menu) {
-                    dropdown.classList.add("hidden")
+                    dropdown.classList.add('hidden');
                 }
             });
-            menu.classList.toggle("hidden");
+            menu.classList.toggle('hidden');
         });
     });
 }
@@ -21,7 +41,7 @@ dropDownMenuPost();
 let uploadedImage = '';
 
 function openOwnImage() {
-    document.getElementById("fileInput").click();
+    document.getElementById('fileInput').click();
 }
 
 function showImagePreview(event) {
@@ -29,41 +49,39 @@ function showImagePreview(event) {
 
     const reader = new FileReader();
     reader.onload = function (e) {
-        uploadedImage = e.target.result
+        uploadedImage = e.target.result;
 
-        const img = document.createElement("img");
-        
+        const img = document.createElement('img');
+
         img.src = e.target.result;
 
-        const previewContainer = document.getElementById("imagePreview");
-        previewContainer.innerHTML = "";
+        const previewContainer = document.getElementById('imagePreview');
+        previewContainer.innerHTML = '';
         previewContainer.appendChild(img);
     };
     reader.readAsDataURL(file);
 }
 
-document.getElementById('uploadBtn').addEventListener("click", openOwnImage);
-document.getElementById('fileInput').addEventListener("change", showImagePreview);
+document.getElementById('uploadBtn').addEventListener('click', openOwnImage);
+document.getElementById('fileInput').addEventListener('change', showImagePreview);
 
 function showExamplePost() {
-    const getUserMessage = document.getElementById("postNewMessage").value;
-    const pElement = document.getElementById("userMessage");
-    const showImageExample = document.getElementById("showImageExample");
+    const getUserMessage = document.getElementById('postNewMessage').value;
+    const pElement = document.getElementById('userMessage');
+    const showImageExample = document.getElementById('showImageExample');
 
-    pElement.innerHTML = "";
-    showImageExample.innerHTML = "";
+    pElement.innerHTML = '';
+    showImageExample.innerHTML = '';
 
     pElement.innerHTML = getUserMessage;
 
     if (uploadedImage) {
-        const imgElement = document.createElement("img");
+        const imgElement = document.createElement('img');
 
         imgElement.src = uploadedImage;
-        imgElement.classList.add("w-full", "h-96");
+        imgElement.classList.add('w-full', 'h-96');
 
         showImageExample.appendChild(imgElement);
     }
-
-
 }
-document.getElementById("seeExampleButton").addEventListener("click", showExamplePost);
+document.getElementById('seeExampleButton').addEventListener('click', showExamplePost);
